@@ -13,8 +13,16 @@ import img4 from "../dashboard/⏰.png";
 import img5 from "../dashboard/💻.png";
 import img6 from "../dashboard/⭐.png";
 import img7 from "../dashboard/💰.png";
+import { usePathname } from "next/navigation";
 
 const Mobileheader = () => {
+  const pathname = usePathname();
+  const getLinkClassName = (path: string) =>
+    `${
+      pathname === path
+        ? "bg-blue-100 flex h-9 pr-2 self-center items-center pl-4 gap-3 rounded-lg"
+        : "flex h-9 pr-2 self-center items-center bg-white pl-4 gap-3 rounded-lg"
+    }`;
   const [isclick, setIsclick] = useState(false);
   return (
     <>
@@ -49,7 +57,7 @@ const Mobileheader = () => {
             style={{ color: "rgba(60, 66, 66, 1)" }}
           />
           <ul className="space-y-8 text-center" style={{ color: "#807D7E" }}>
-            <div className="flex gap-4 items-center">
+            <div className={getLinkClassName("/")}>
               <Image src={img1} alt="img" />
               <Link
                 href={"/"}
@@ -59,7 +67,7 @@ const Mobileheader = () => {
                 Welcome
               </Link>
             </div>
-            <div className="flex gap-4 items-center">
+            <div className={getLinkClassName("/manhaj")}>
               <Image src={img8} alt="img" />
               <Link
                 href={"/manhaj"}
@@ -69,7 +77,7 @@ const Mobileheader = () => {
                 Our Manhaj & Tutors
               </Link>
             </div>
-            <div className="flex gap-4 items-center">
+            <div className={getLinkClassName("/curriculum")}>
               <Image src={img3} alt="img" />
               <Link
                 href={"/curriculum"}
@@ -79,7 +87,7 @@ const Mobileheader = () => {
                 Curriculum
               </Link>
             </div>
-            <div className="flex gap-4 items-center">
+            <div className={getLinkClassName("/schedule")}>
               <Image src={img4} alt="img" />
               <Link
                 href={"/schedule"}
@@ -89,7 +97,7 @@ const Mobileheader = () => {
                 Class Schedules
               </Link>
             </div>
-            <div className="flex gap-4 items-center">
+            <div className={getLinkClassName("/tech")}>
               <Image src={img5} alt="img" />
               <Link
                 href={"/tech"}
@@ -99,7 +107,7 @@ const Mobileheader = () => {
                 Tech Training
               </Link>
             </div>
-            <div className="flex gap-4 items-center">
+            <div className={getLinkClassName("/review")}>
               <Image src={img6} alt="img" />
               <Link
                 href={"/review"}
@@ -109,7 +117,7 @@ const Mobileheader = () => {
                 Student Reviews
               </Link>
             </div>
-            <div className="flex gap-4 items-center">
+            <div className={getLinkClassName("/payment")}>
               <Image src={img7} alt="img" />
               <Link
                 href={"/payment"}
