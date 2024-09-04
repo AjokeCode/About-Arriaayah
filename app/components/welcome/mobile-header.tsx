@@ -20,8 +20,8 @@ const Mobileheader = () => {
   const getLinkClassName = (path: string) =>
     `${
       pathname === path
-        ? "bg-blue-100 flex h-9 pr-2 self-center items-center pl-4 gap-3 rounded-lg"
-        : "flex h-9 pr-2 self-center items-center bg-white pl-4 gap-3 rounded-lg"
+        ? "bg-blue-100 flex h-9 pr-2 self-center items-center pl-4 gap-4 rounded-lg"
+        : "flex h-9 pr-2 self-center items-center bg-white pl-4 gap-4 rounded-lg"
     }`;
   const [isclick, setIsclick] = useState(false);
   return (
