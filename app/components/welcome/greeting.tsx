@@ -23,7 +23,7 @@ const Greeting = () => {
           a memorization approach to learning in a bite-sized manner.
         </p>
         <p className="md:text-xl text-base font-normal">
-          At Techeeroh Academy, we're on a quest to empower lifelong learners
+          At Techeeroh Academy, we are on a quest to empower lifelong learners
           with Islamic knowledge and a career opportunity in tech(optional). We
           believe knowledge is a treasure chest, and we provide the key to
           unlock its riches. Our students gain the tools needed to navigate the

@@ -6,6 +6,13 @@ import { AiOutlineClose } from "react-icons/ai";
 import img2 from "./Logo (3).svg";
 import Image from "next/image";
 import { useState } from "react";
+import img1 from "../dashboard/👋.png";
+import img8 from "../dashboard/🎯.png";
+import img3 from "../dashboard/📕.png";
+import img4 from "../dashboard/⏰.png";
+import img5 from "../dashboard/💻.png";
+import img6 from "../dashboard/⭐.png";
+import img7 from "../dashboard/💰.png";
 
 const Mobileheader = () => {
   const [isclick, setIsclick] = useState(false);
@@ -42,12 +49,76 @@ const Mobileheader = () => {
             style={{ color: "rgba(60, 66, 66, 1)" }}
           />
           <ul className="space-y-8 text-center" style={{ color: "#807D7E" }}>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/cart">Cart</Link>
-            </li>
+            <div className="flex gap-4 items-center">
+              <Image src={img1} alt="img" />
+              <Link
+                href={"/"}
+                className="font-normal"
+                style={{ color: "rgba(51, 51, 51, 0.7)" }}
+              >
+                Welcome
+              </Link>
+            </div>
+            <div className="flex gap-4 items-center">
+              <Image src={img8} alt="img" />
+              <Link
+                href={"/manhaj"}
+                className="font-normal"
+                style={{ color: "rgba(51, 51, 51, 0.7)" }}
+              >
+                Our Manhaj & Tutors
+              </Link>
+            </div>
+            <div className="flex gap-4 items-center">
+              <Image src={img3} alt="img" />
+              <Link
+                href={"/curriculum"}
+                className=" font-normal"
+                style={{ color: "rgba(51, 51, 51, 0.7)" }}
+              >
+                Curriculum
+              </Link>
+            </div>
+            <div className="flex gap-4 items-center">
+              <Image src={img4} alt="img" />
+              <Link
+                href={"/schedule"}
+                className=" font-normal"
+                style={{ color: "rgba(51, 51, 51, 0.7)" }}
+              >
+                Class Schedules
+              </Link>
+            </div>
+            <div className="flex gap-4 items-center">
+              <Image src={img5} alt="img" />
+              <Link
+                href={"/tech"}
+                className=" font-normal"
+                style={{ color: "rgba(51, 51, 51, 0.7)" }}
+              >
+                Tech Training
+              </Link>
+            </div>
+            <div className="flex gap-4 items-center">
+              <Image src={img6} alt="img" />
+              <Link
+                href={"/review"}
+                className=" font-normal"
+                style={{ color: "rgba(51, 51, 51, 0.7)" }}
+              >
+                Student Reviews
+              </Link>
+            </div>
+            <div className="flex gap-4 items-center">
+              <Image src={img7} alt="img" />
+              <Link
+                href={"/payment"}
+                className=" font-normal"
+                style={{ color: "rgba(51, 51, 51, 0.7)" }}
+              >
+                Payments
+              </Link>
+            </div>
           </ul>
         </nav>
       ) : (
