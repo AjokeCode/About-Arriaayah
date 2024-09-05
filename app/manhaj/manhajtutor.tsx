@@ -23,7 +23,7 @@ const ManhajandTutor = () => {
         <p className="md:text-xl text-base font-normal">
           Our team of tutors consists of experienced educators and scholars in
           Islamic studies, are committed to helping students develop a strong
-          foundation in Qur'an memorization, Islamic knowledge and Arabic
+          foundation in Quran memorization, Islamic knowledge and Arabic
           language.
         </p>
       </div>
