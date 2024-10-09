@@ -26,7 +26,7 @@ const Mobileheader = () => {
   const [isclick, setIsclick] = useState(false);
   return (
     <>
-      <div className="md:hidden px-4 flex justify-between items-center md:mb-4 mb-2">
+      <div className="md:hidden px-4 flex justify-between items-center sticky top-0 z-50 bg-white h-16">
         <div className="flex gap-1 items-center">
           <Image src={img2} alt="img" />
           <h1 className="text-base" style={{ color: "rgba(51, 51, 51, 1)" }}>
@@ -97,10 +97,10 @@ const Mobileheader = () => {
                 Class Schedules
               </Link>
             </div>
-            <div className={getLinkClassName("/tech")}>
+            <div className={getLinkClassName("/techtraining")}>
               <Image src={img5} alt="img" />
               <Link
-                href={"/tech"}
+                href={"/techtraining"}
                 className=" font-normal"
                 style={{ color: "rgba(51, 51, 51, 0.7)" }}
               >

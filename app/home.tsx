@@ -3,7 +3,7 @@ import Welcome from "./components/welcome/welcome";
 
 const Home = () => {
   return (
-    <div className="w-full flex">
+    <div className="w-full flex relative">
       <Dashboard />
       <Welcome />
     </div>

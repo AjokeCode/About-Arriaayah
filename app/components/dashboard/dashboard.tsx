@@ -22,7 +22,7 @@ const Dashboard = () => {
     }`;
   return (
     <div
-      className="md:flex hidden flex-col gap-8 h-full bg-white w-1/5 border-r py-6 text-sm font-medium text-white"
+      className="md:flex hidden flex-col gap-6 h-full sticky top-0 z-20 bg-white w-1/5 border-r pt-6 text-sm font-medium text-white"
       style={{
         borderColor: "rgba(224, 224, 224, 1)",
         letterSpacing: "6%",
@@ -88,10 +88,10 @@ const Dashboard = () => {
           Class Schedules
         </Link>
       </div>
-      <div className={getLinkClassName("/tech")}>
+      <div className={getLinkClassName("/techtraining")}>
         <Image src={img5} alt="img" />
         <Link
-          href={"/tech"}
+          href={"/techtraining"}
           className=" font-normal"
           style={{ color: "rgba(51, 51, 51, 0.7)" }}
         >
@@ -119,7 +119,7 @@ const Dashboard = () => {
         </Link>
       </div>
       <div
-        className="flex w-5/6 text-center h-9 self-center rounded-lg pt-2 mt-40"
+        className="flex w-5/6 text-center h-9 self-center rounded-lg pt-2"
         style={{
           backgroundColor: "rgba(245, 245, 245, 1)",
         }}
