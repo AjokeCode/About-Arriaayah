@@ -28,7 +28,7 @@ const Payment2 = () => {
             <h1 className="font-bold mb-3">For Tech classes</h1>
             <ol className="list-decimal pl-8 flex flex-col gap-3">
               <li> Commitment fee is #20k for a period of 4 -6months to ease it for our brethren.</li>
-              <li>If the participant isn't serious at the end for up to like 2 to 3months frame, such participant will be required to make additional payment of #80k before continuing with the academy in tech aspect.</li>
+              <li>If the participant isn&apos;t serious at the end for up to like 2 to 3months frame, such participant will be required to make additional payment of #80k before continuing with the academy in tech aspect.</li>
             </ol>
           </div>
           </div>

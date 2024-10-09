@@ -53,7 +53,7 @@ const Schedule2 = () => {
           <div className="pl-10 flex flex-col pb-6">
             <h1 className="font-bold">Personalized classes</h1>
             <p className="mb-2">
-              Days for personalized classes for Islamic text and Qur'an is
+              Days for personalized classes for Islamic text and Qur&apos;an is
               determined with the schedules of interested candidates and
               consequently the payment.
             </p>

@@ -16,9 +16,9 @@ const Schedule4 = () => {
           <h1 className="font-bold">PROGRESS TRACKING</h1>
         </div>
         <p className="pl-8">
-          At Techeeroh Academy, we don't just leave our students to listen to
+          At Techeeroh Academy, we don&apos;t just leave our students to listen to
           classes on their own, we, however, track their progress in a weekly
-          progress where each students would be questioned on what they've done
+          progress where each students would be questioned on what they&apos;ve done
           for the week.
         </p>
         <p className="pl-8">

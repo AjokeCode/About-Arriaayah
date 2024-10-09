@@ -19,10 +19,10 @@ const Schedule3 = () => {
           <li>Classes are 100% online via telegram and WhatsApp.</li>
           <li>
             Audio/Video recordings of classes are made available for
-            accessibility at students' convenience
+            accessibility at students&apos; convenience
           </li>
           <li>
-            Qur'an classes and progress tracking meeting are via Google meet
+            Qur&apos;an classes and progress tracking meeting are via Google meet
           </li>
           <li>
             Students are required to have listened to their respective classes,

@@ -30,7 +30,7 @@ const Curriculum1 = () => {
         <p className="text-xl font-normal">
           Below are summary of the topics of the books that will be taken one
           after the other in each class with advancement in the books as the
-          level advances. Qur'an is constant and once per week for each student.
+          level advances. Qur&apos;an is constant and once per week for each student.
         </p>
       </div>
       <div
