@@ -1,35 +1,57 @@
+"use client"
 import Image from "next/image";
-import img1 from "./Banner.svg";
-import img2 from "../dashboard/👋.png";
 import Mobileheader from "./mobile-header";
 import Greeting from "./greeting";
 import About from "./about";
-import Link from "next/link";
+import { arLogo2 } from "@/public/images";
+import { handImg } from "@/public/images";
+import Footer from "./Footer";
+import {motion} from "framer-motion"
 
 const Welcome = () => {
   return (
     <div
-      className="md:w-4/5 w-full bg-white py-6"
-      style={{ color: "rgba(51, 51, 51, 1)" }}
+   
+      className="w-full flex flex-col gap-4 pb-5 max-md:bg-white"
     >
-      <div className="md:flex hidden gap-4 items-center mb-4 pl-4">
-        <Image src={img2} alt="img" />
-        <h1 className="text-lg font-medium">Welcome</h1>
+         <div className="pt-4 md:flex hidden w-full">
+      <div className="gap-4 items-center bg-[white] p-3 rounded-[1rem] text-black w-full flex ">
+    <Image src={handImg} alt="img" className=" h-5 w-5" />
+        <h1 className="text-[1rem] font-medium">Welcome</h1>
+      </div>
       </div>
       <Mobileheader />
-      <Image src={img1} alt="img" />
-      <Greeting />
-      <About />
-      <div
-        className="md:w-44 w-11/12 h-12 md:ml-28 mt-6 ml-6 text-white font-medium text-sm rounded-lg text-center pt-4 justify-self-center"
-        style={{ backgroundColor: "rgba(0, 30, 154, 1)" }}
-      >
-        <Link href={"/enroll"}>Enroll Now</Link>
+      <motion.div  initial={{ y: "50%", opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    exit={{ y: "50%", opacity: 0 }}
+    transition={{ duration: 0.6, ease: "easeInOut" }} className=" bg-white md:rounded-[1rem] ">
+        <div className="flex flex-col gap-8 p-5 max-w-screen-md md:mx-auto">
+      <div className="flex flex-col gap-5">
+      <div className="bg-[#0362F2] rounded-[14px] flex items-center justify-center py-5">
+        <div className="flex items-center gap-4 text-white">
+        <div className='bg-[#fff] flex items-center justify-center rounded-full h-12 w-12 '>
+              <Image src={arLogo2} alt='logo-image' className='w-5  ' />
+            </div>
+            <div className="">
+              <h1 className="font-[500] text-xl tracking-[0.5px]  ">Ar-Ri&apos;aayah Academy</h1>
+              <p className="text-xs font-[400]">Caring for muslims with busy schedules</p>
+            </div>
+        </div>
       </div>
-      <p className="text-xl font-normal mt-4 md:ml-28 ml-8">
-        Enrolment deadline:
-        <span style={{ color: "rgba(255, 121, 0, 1)" }}>15th August, 2024</span>
-      </p>
+      <Greeting />
+      </div>
+      <About />
+      <div className="text-[#535862] text-[1rem] flex flex-col gap-4 font-[400]">
+        <p>
+          At Ar-Ri&apos;aayah Academy, our goal is to help every Muslim access quality Islamic education—regardless of how packed their schedule might be.
+        </p>
+        <p>
+          Start your journey with us today, and make every step a step closer to growth and knowledge.
+        </p>
+      </div>
+     <Footer/>
+      </div>
+      </motion.div>
     </div>
   );
 };

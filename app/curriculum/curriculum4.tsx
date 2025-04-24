@@ -1,7 +1,5 @@
 import { useState } from "react";
-import Image from "next/image";
-import img1 from "../manhaj/Polygon 1.png";
-
+import { Plus, Minus } from "lucide-react"
 const Curriculum4 = () => {
   const [selectedLevels, setSelectedLevels] = useState<string | null>(null);
 
@@ -101,34 +99,51 @@ const Curriculum4 = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4 items-center md:mt-8 mt-4 justify-center">
-      {Levels.map((level) => (
-        <div key={level.id} className="w-4/5">
-          <div
-            className="flex md:pl-12 pl-6 gap-6 bg-white rounded-xl border h-20 items-center cursor-pointer"
-            style={{
-              borderColor: "rgba(224, 224, 224, 1)",
-              color: "rgba(51, 51, 51, 1)",
-            }}
-            onClick={() => toggleLevels(level.id)}
+    <div className="text-black grid grid-cols-1 md:grid-cols-2 gap-4 justify-center md:items-start">
+  {Levels.map((level, index) => (
+    <div
+      key={level.id}
+      className={`rounded-xl overflow-hidden shadow-md bg-white p-3 ${
+        index === Levels.length - 1 ? 'md:col-span-2' : ''
+      }`}
+    >
+      <div
+        className="flex justify-between items-center cursor-pointer gap-5 mb-1"
+        onClick={() => toggleLevels(level.id)}
+      >
+        <p className="text-[#414651] font-[600] text-sm md:text-lg lg:text-xl">
+          {level.name}
+        </p>
+        <div>
+          <button
+            className="w-5 h-5 md:w-8 md:h-8 items-center justify-center rounded-full text-[#3056D3] border border-[#3056D3] flex"
+            aria-label={
+              selectedLevels === level.id ? 'Collapse details' : 'Expand details'
+            }
           >
-            <Image src={img1} alt="img" />
-            <p className="md:text-xl text-base font-normal">{level.name}</p>
-          </div>
-
-          {selectedLevels === level.id && (
-            <ol className="bg-white p-4 mt-2 rounded-lg border border-gray-300 list-decimal md:text-base text-xl">
-              <h1 className="font-bold">{level.title}</h1>
-              {level.topics.map((topic, index) => (
-                <li key={index} className="mt-2 font-normal ml-4">
-                  {topic}
-                </li>
-              ))}
-            </ol>
-          )}
+            {selectedLevels === level.id ? (
+              <Minus className="w-2.5 md:w-[16px]" />
+            ) : (
+              <Plus className="w-2.5 md:w-[16px]" />
+            )}
+          </button>
         </div>
-      ))}
+      </div>
+
+      {selectedLevels === level.id && (
+        <ol className="p-4 mt-2 list-decimal text-sm text-[#535862]">
+          <h1 className="font-bold">{level.title}</h1>
+          {level.topics.map((topic, index) => (
+            <li key={index} className="mt-2 font-normal ml-4">
+              {topic}
+            </li>
+          ))}
+        </ol>
+      )}
     </div>
+  ))}
+</div>
+
   );
 };
 

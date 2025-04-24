@@ -1,36 +1,46 @@
+"use client"
 import Image from "next/image";
-import img2 from "../components/dashboard/🎯.png";
 import Mobileheader from "../components/welcome/mobile-header";
 import Link from "next/link";
 import ManhajandTutor from "./manhajtutor";
-import ListofTutor from "./listoftutor";
+import ExpandableProfileList from "./Expandable";
+import {  manhajImg,  } from "@/public/images";
+import { motion } from "framer-motion";
 
 const Manhaj1 = () => {
   return (
     <div
-      className="md:w-4/5 w-full bg-white py-6"
-      style={{ color: "rgba(51, 51, 51, 1)" }}
-    >
-      <div
-        className="md:flex hidden gap-4 items-center mb-4 pl-4 border-b"
-        style={{ outlineColor: "rgba(224, 224, 224, 1)" }}
+    className="w-full flex flex-col gap-4 pb-5 max-md:bg-white"
+    
+  >
+       <div className="pt-4 md:flex hidden">
+       <div className="gap-4 items-center bg-[white] p-3 rounded-[1rem] text-black w-full flex ">
+          <Image src={manhajImg} alt="img" className=" h-5 w-5"/>
+          <h1 className="text-[1rem] font-medium">Our Manhaj and Tutors</h1>
+        </div>
+        </div>
+        <Mobileheader />
+        <motion.div  initial={{ y: "40%", opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    exit={{ y: "40%", opacity: 0 }}
+    transition={{ duration: 0.6, ease: "easeInOut" }} className=" bg-white md:rounded-[1rem] ">
+        <div className="flex flex-col gap-8 p-5 max-w-screen-md md:mx-auto">
+        <div className="flex flex-col gap-5">
+          <ManhajandTutor />
+          <ExpandableProfileList />
+          <div className="md:flex md:items-center md:justify-start w-full">
+      <Link href={"/enroll"}
+        className="text-white font-medium text-sm rounded-[14px]  justify-center bg-[#0362F2] p-3 px-6 flex"
       >
-        <Image src={img2} alt="img" />
-        <h1 className="text-lg font-medium">Our Manhaj and Tutors</h1>
+        Enroll Now
+      </Link>
       </div>
-      <Mobileheader />
-      <ManhajandTutor />
-      <ListofTutor />
-      <div
-        className="md:w-44 w-11/12 h-12 md:ml-28 mt-6 ml-6 text-white font-medium text-sm rounded-lg text-center pt-4 justify-self-center"
-        style={{ backgroundColor: "rgba(0, 30, 154, 1)" }}
-      >
-        <Link href={"/enroll"}>Enroll Now</Link>
-      </div>
-      <p className="text-xl font-normal mt-4 md:ml-28 ml-8">
-        Enrolment deadline:
-        <span style={{ color: "rgba(255, 121, 0, 1)" }}>15th August, 2024</span>
+      <p className="text-[1rem] font-[400] text-[#535862] text-center md:hidden">
+        Enrolment deadline: <span className= "text-[#FF7800]">15th August, 2024</span>
       </p>
+      </div>
+      </div>
+      </motion.div>
     </div>
   );
 };
