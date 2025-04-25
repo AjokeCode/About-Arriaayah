@@ -1,50 +1,43 @@
 import Image from "next/image";
-import img1 from "../components/dashboard/Logo (4).svg";
+import img1 from "../dashboard/Logo (4).svg";
+import { arLogo2 } from "@/public/images";
+import { CheckCircle } from "lucide-react";
+
+
+const points = [
+  "Ability to read, recite and memorize the Qura'n with sound Tajweed.",
+  "Ability to memorize the Qur'an at their own pace (No group memorization).",
+  "Strong foundational knowledge of the islamic principles with sound ideology of the pious predecessors.",
+  "Ability to understand and speak Arabic Language fluently and read Arabic texts with ease(If serious and consistent).",
+  "Ability to seek-out Islamic studies resources (schlars and texts).",
+  "Oppurtunity to kickstart a career in tech preparing students for the future.."
+];
 const Curriculum3 = () => {
   return (
-    <div className="flex items-center md:mt-8 mt-4 justify-center">
-      <div
-        className="flex md:w-4/5 w-11/12 rounded-2xl md:px-16 px-8 py-8 md:gap-8 gap-2 md:flex-row flex-col font-medium"
-        style={{
-          backgroundColor: "rgba(219, 238, 250, 1)",
-          color: "rgba(51, 51, 51, 1)",
-        }}
-      >
-        <div>
-          <Image src={img1} alt="img" />
-        </div>
-        <div>
-          <h1 className="md:text-2xl text-lg md:mb-4 mb-2">
-            Techeeroh Academy:
-          </h1>
-          <ul className="md:text-xl text-base list-disc">
-            <li className="md:mb-3 mb-1">
-              Ability to read, recite and memorize the Qura&apos;n with sound
-              Tajweed
+  <div className=" py-6 px-4 bg-[#EDF8FF] rounded-2xl">
+        <div
+          className="flex md:flex-row flex-col font-medium gap-5"
+        >
+          <div>
+         <div className='bg-[#fff] flex items-center justify-center rounded-full h-10 w-10 '>
+                  <Image src={arLogo2} alt='logo-image' className='w-4 ' />
+          </div>
+          </div>
+          <div className="">
+         
+            <h1 className=" text-lg text-[#414651] font-[600]">
+            What students will gain by enrolling with us:
+            </h1>
+            <ul className="space-y-3">
+          {points.map((point, index) => (
+            <li key={index} className="text-[#535862] font-[400]">
+              {point}
             </li>
-            <li>
-              Ability to be memorizing the Qur&apos;an at their own pace (No
-              group memorization)
-            </li>
-            <li className="md:my-3 my-1">
-              Strong foundational knowledge of the Islamic principles with sound
-              ideology of the pious predecessors
-            </li>
-            <li>
-              Ability to understand and speak Arabic Language fluently and read
-              Arabic texts with ease (If serious and consistent)
-            </li>
-            <li className="md:my-3 my-1">
-              Ability to seek-out Islamic studies resources (scholars and texts)
-            </li>
-            <li className="md:mt-3 mt-1">
-              Opportunity to kickstart a career in tech preparing students for
-              the future.
-            </li>
-          </ul>
+          ))}
+        </ul>
+          </div>
         </div>
       </div>
-    </div>
   );
 };
 export default Curriculum3;

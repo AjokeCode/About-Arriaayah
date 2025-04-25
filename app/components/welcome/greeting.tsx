@@ -1,36 +1,28 @@
 import Image from "next/image";
 import img1 from "./👋 (1).png";
+import { handImg } from "@/public/images";
 
 const Greeting = () => {
   return (
     <div
-      className="flex font-bold md:px-16 px-8 pt-8 md:gap-8 gap-4 md:flex-row flex-col"
-      style={{ color: "rgba(51, 51, 51, 1)" }}
+      className="flex flex-col gap-5"
     >
-      <div>
-        <Image src={img1} alt="img" className="md:w-28 md:h-9 h-8 w-12" />
+      <div className="flex items-center gap-2">
+        <Image src={handImg} alt="img" className=" h-9 w-9" />
+        <h2 className="font-[500] text-2xl tracking-[0.5px] text-[#414651]">As-salaamu Alaykum!</h2>
       </div>
-      <div className="flex flex-col md:gap-8 gap-4">
-        <h1 className="md:text-3xl text-lg">Assalamu Alaykum!</h1>
-        <h2 className="md:text-xl text-sm">
-          Welcome to Techeeroh Academy; Bridging the gap between faith and
-          future.
-        </h2>
-        <p className="md:text-xl text-base font-normal">
-          Techeeroh Academy is an Islamic online learning platform that combines
-          learning Islamic knowledge with tech skills focusing on people with
-          busy schedules to help maintain their Islamic learning journey taking
-          a memorization approach to learning in a bite-sized manner.
+      <h2 className="font-[500] text-[1rem] text-[#414651]">Welcome to Ar-Ri&apos;aayah Academy; Caring for Muslims with busy schedules.</h2>
+      <div className="flex flex-col gap-4 text-[#535862] text-[1rem] font-[400]">
+        <p className="">
+          Balancing life&apos;s responsibilities while seeking Islamic knowledge isn&apos;t always easy. That&apos;s why Ar-Ri&apos;aayah Academy (formerly Techeeroh Academy) was created, to make learning Islamic knowledge accessible, flexible, and sustainable for people with busy schedules.
         </p>
-        <p className="md:text-xl text-base font-normal">
-          At Techeeroh Academy, we are on a quest to empower lifelong learners
-          with Islamic knowledge and a career opportunity in tech(optional). We
-          believe knowledge is a treasure chest, and we provide the key to
-          unlock its riches. Our students gain the tools needed to navigate the
-          vast landscapes of Quran, Sunnah, and classical Islamic texts,
-          fostering a well-rounded understanding of their faith coupled with
-          preparing them for the future.
+        <p>
+          We offer bite-sized lessons, live and pre-recorded classes, and weekly progress tracking to help students, professionals, and remote workers build a solid foundation in Islam at their own pace without the rush.
         </p>
+        <p>
+          Whether you&apos;re starting your journey with the Qur&apos;an or deepening your understanding of Islamic principles, Ar-Ri&apos;aayah Academy is here to guide you step by step.
+        </p>
+       
       </div>
     </div>
   );

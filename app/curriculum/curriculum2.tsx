@@ -3,19 +3,14 @@ import img1 from "./📕 (2).png";
 
 const Curriculum2 = () => {
   return (
-    <div
-      className="flex font-bold md:px-16 px-8 pt-8 md:gap-8 gap-4 md:flex-row flex-col"
-      style={{ color: "rgba(51, 51, 51, 1)" }}
-    >
-      <div>
-        <Image src={img1} alt="img" className="md:w-20 md:h-7 h-8 w-8" />
-      </div>
-      <div className="flex flex-col md:gap-8 gap-4">
+    <div className="text-black">
+    <div>
+      <div className="flex flex-col gap-3">
         <h1 className="text-2xl">Our Curriculum</h1>
-        <ul className="list-disc">
-          <li className="md:text-xl text-base font-normal">
+        <ul className="list-disc pl-7 text-[#535862] font-[400] text-[1rem] space-y-7">
+          <li className="">
             This academy is designed for{" "}
-            <span className="underline font-semibold">
+            <span className="underline italic ">
               Young Muslim Learners, people with busy schedules and Muslim Tech
               Enthusiasts
             </span>{" "}
@@ -24,7 +19,7 @@ const Curriculum2 = () => {
             to learning) and kickstart a career in tech(optional) in a fast
             paced technology era.
           </li>
-          <li className="md:text-xl text-base font-normal my-6">
+          <li className="">
             Classes in this academy are of 6 divisions (Level 1 to 6). Students
             who fall into each of the levels has a set of books they would have
             to finish before moving to another level to ensure the basics are
@@ -35,6 +30,7 @@ const Curriculum2 = () => {
           </li>
         </ul>
       </div>
+    </div>
     </div>
   );
 };
