@@ -10,9 +10,9 @@ const Footer = () => {
         Enroll Now
       </Link>
       </div>
-      <p className="text-[1rem] font-[400] text-[#535862] text-center md:hidden">
+      {/* <p className="text-[1rem] font-[400] text-[#535862] text-center md:hidden">
         Enrolment deadline: <span className= "text-[#FF7800]">15th August, 2024</span>
-      </p>
+      </p> */}
       </div>
      
   )
