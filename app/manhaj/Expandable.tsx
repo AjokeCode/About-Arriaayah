@@ -178,9 +178,9 @@ export default function ExpandableProfileList() {
             <h3 className="text-[#414651] font-[600] text-sm md:text-[1rem] lg:text-lg">{profile.name}</h3>
             <div>
             <button
-              className="w-5 h-5 md:w-8 md:h-8 items-center justify-center rounded-full text-[#3056D3] border border-[#3056D3] flex"
+              className="w-5 h-5 md:w-8 md:h-8 items-center justify-center rounded-full text-[#3056D3] border border-[#3056D3] flex disabled:cursor-not-allowed disabled:opacity-50"
               aria-label={expandedId === profile.id ? "Collapse details" : "Expand details"}
-            >
+            disabled={profile.id !== "ahmad-mikail"}>
               {expandedId === profile.id ? <Minus  className="w-2.5 md:w-[16px]"/> : <Plus className="w-2.5  md:w-[16px]" />}
             </button>
             </div>

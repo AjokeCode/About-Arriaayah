@@ -9,7 +9,7 @@ const points = [
   "Ability to memorize the Qur'an at their own pace (No group memorization).",
   "Strong foundational knowledge of the islamic principles with sound ideology of the pious predecessors.",
   "Ability to understand and speak Arabic Language fluently and read Arabic texts with ease(If serious and consistent).",
-  "Ability to seek-out Islamic studies resources (schlars and texts).",
+  "Ability to seek-out Islamic studies resources (scholars and texts).",
   "Oppurtunity to kickstart a career in tech preparing students for the future.."
 ];
 const Curriculum3 = () => {
@@ -20,7 +20,7 @@ const Curriculum3 = () => {
         >
           <div>
          <div className='bg-[#fff] flex items-center justify-center rounded-full h-10 w-10 '>
-                  <Image src={arLogo2} alt='logo-image' className='w-4 ' />
+            <Image src={arLogo2} alt='logo-image' className='w-4 ' />
           </div>
           </div>
           <div className="">
@@ -31,7 +31,7 @@ const Curriculum3 = () => {
             <ul className="space-y-3">
           {points.map((point, index) => (
             <li key={index} className="text-[#535862] font-[400]">
-              {point}
+             <span className="text-[#535862] font-[400]"><span className="text-lg">✔</span> {point}</span>
             </li>
           ))}
         </ul>
