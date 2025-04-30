@@ -47,7 +47,7 @@ const Dashboard = () => {
         </div>
       </div>
       <div className=''>
-      <Link  href="https://arriaayah.com/EnrollmentForm" className="bg-[#0362F2] text-white px-6 py-2.5 rounded-[10px] text-xs font-[400]  hover:bg-blue-700 transition flex items-center justify-center outline-none">
+      <Link  href="https://arriaayah.com/enroll" className="bg-[#0362F2] text-white px-6 py-2.5 rounded-[10px] text-xs font-[400]  hover:bg-blue-700 transition flex items-center justify-center outline-none">
                 Enroll now 
                 </Link>
             </div>
