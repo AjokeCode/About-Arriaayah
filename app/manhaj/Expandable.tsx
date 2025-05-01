@@ -48,7 +48,7 @@ export default function ExpandableProfileList() {
         },
         {
           period: "2021 - TILL DATE",
-          position: "QURAN AND ARABIC TEACHER @ MARKAZU5 SOHAABAL ILBEU-ODE",
+          position: "QURAN AND ARABIC TEACHER @ MARKAZU5 SOHAABAL IJEBU-ODE",
         },
       ],
       certification: {
@@ -173,14 +173,14 @@ export default function ExpandableProfileList() {
         <div key={profile.id} className="rounded-xl overflow-hidden shadow-sm bg-[#f3f2f2]/30 p-4 ">
           <div
             className=" flex justify-between items-center cursor-pointer gap-5 mb-1"
-            onClick={() => toggleExpand(profile.id)}
+           
           >
             <h3 className="text-[#414651] font-[600] text-sm md:text-[1rem] lg:text-lg">{profile.name}</h3>
             <div>
             <button
               className="w-5 h-5 md:w-8 md:h-8 items-center justify-center rounded-full text-[#3056D3] border border-[#3056D3] flex disabled:cursor-not-allowed disabled:opacity-50"
               aria-label={expandedId === profile.id ? "Collapse details" : "Expand details"}
-            disabled={profile.id !== "ahmad-mikail"}>
+            disabled={profile.id !== "ahmad-mikail"}  onClick={() => toggleExpand(profile.id)}>
               {expandedId === profile.id ? <Minus  className="w-2.5 md:w-[16px]"/> : <Plus className="w-2.5  md:w-[16px]" />}
             </button>
             </div>
